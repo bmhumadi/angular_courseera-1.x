@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>My Favorite Dish</h1>
+  <div>
+    <div ng-if="MyInfoCtrl.hasUserSignedUp">
+      <h3>{{MyInfoCtrl.favoriteDish.title}}</h3>
+      <p>{{MyInfoCtrl.favoriteDish.description}}</p>
+      <div>
+        <img ng-src="{{MyInfoCtrl.favoriteDish.imageUrl}}" />
+      </div>
+    </div>
+    <div ng-if="!MyInfoCtrl.hasUserSignedUp">
+      Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a>
+    </div>
+  </div>
+</div>
